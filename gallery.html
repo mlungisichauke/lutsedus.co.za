@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gallery and reviews by Lutsedus Travels & Tours." />
+  <title>Lutsedus Travels &amp; Tours | Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Lutsedus Travels & Tours Home"><img src="logo/logo.jpeg" alt="Lutsedus Travels & Tours logo" class="logo-image" /><div class="logo-text"><span class="logo-main">LUTSEDUS</span><span class="logo-sub">Travels &amp; Tours</span></div></a>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="safaris.html" class="nav-link">Safaris</a></li>
+        <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+    </div>
+  </nav>
+
+  <section class="section gallery-section">
+    <div class="container">
+      <div class="section-header"><span class="section-tag">Captured Moments</span><h1 class="section-title">Gallery</h1><p class="section-subtitle">A glimpse into the extraordinary experiences we create across Africa and beyond.</p></div>
+      <div class="gallery-filters"><button class="gallery-filter active" data-filter="all">All</button><button class="gallery-filter" data-filter="wildlife">Wildlife</button><button class="gallery-filter" data-filter="landscape">Landscape</button><button class="gallery-filter" data-filter="culture">Culture</button><button class="gallery-filter" data-filter="travel">Travel</button></div>
+      <div class="gallery-grid" id="gallery-grid">
+        <div class="gallery-item reveal" data-category="wildlife"><img src="images/picture09.jpg" alt="Kruger elephants" loading="lazy" /><div class="gallery-overlay"><i class="fas fa-expand"></i><span>Kruger Elephants</span></div></div>
+        <div class="gallery-item reveal delay-1" data-category="wildlife"><img src="images/picture10.jpg" alt="Sabi Sand lion" loading="lazy" /><div class="gallery-overlay"><i class="fas fa-expand"></i><span>Sabi Sand Lion</span></div></div>
+        <div class="gallery-item reveal delay-2" data-category="landscape"><img src="images/picture11.jpg" alt="African sunset" loading="lazy" /><div class="gallery-overlay"><i class="fas fa-expand"></i><span>African Sunset</span></div></div>
+        <div class="gallery-item reveal delay-3" data-category="wildlife"><img src="images/picture12.jpg" alt="Timbavati giraffes" loading="lazy" /><div class="gallery-overlay"><i class="fas fa-expand"></i><span>Timbavati Giraffes</span></div></div>
+        <div class="gallery-item reveal delay-4" data-category="wildlife"><img src="images/picture13.jpg" alt="Cheetah hunt" loading="lazy" /><div class="gallery-overlay"><i class="fas fa-expand"></i><span>Cheetah Hunt</span></div></div>
+        <div class="gallery-item reveal delay-5" data-category="landscape"><img src="images/picture14.jpg" alt="Aerial Africa" loading="lazy" /><div class="gallery-overlay"><i class="fas fa-expand"></i><span>Aerial Africa</span></div></div>
+        <div class="gallery-item reveal" data-category="travel"><img src="images/picture15.jpg" alt="Mozambique coast" loading="lazy" /><div class="gallery-overlay"><i class="fas fa-expand"></i><span>Mozambique Coast</span></div></div>
+        <div class="gallery-item reveal delay-1" data-category="culture"><img src="images/picture01.jpg" alt="Cultural village" loading="lazy" /><div class="gallery-overlay"><i class="fas fa-expand"></i><span>Cultural Village</span></div></div>
+        <div class="gallery-item reveal delay-2" data-category="travel"><img src="images/picture02.jpg" alt="Dubai nights" loading="lazy" /><div class="gallery-overlay"><i class="fas fa-expand"></i><span>Dubai Nights</span></div></div>
+        <div class="gallery-item reveal delay-3" data-category="wildlife"><img src="images/picture03.jpg" alt="Leopard at dusk" loading="lazy" /><div class="gallery-overlay"><i class="fas fa-expand"></i><span>Leopard at Dusk</span></div></div>
+        <div class="gallery-item reveal delay-4" data-category="landscape"><img src="images/picture04.jpg" alt="Zebra plains" loading="lazy" /><div class="gallery-overlay"><i class="fas fa-expand"></i><span>Zebra Plains</span></div></div>
+        <div class="gallery-item reveal delay-5" data-category="travel"><img src="images/picture05.jpg" alt="Victoria Falls" loading="lazy" /><div class="gallery-overlay"><i class="fas fa-expand"></i><span>Victoria Falls</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header"><span class="section-tag">Happy Travellers</span><h2 class="section-title">What Our Guests Say</h2><p class="section-subtitle">Thousands of travellers have trusted Lutsedus Travels.</p></div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal"><div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="testimonial-text">"An absolutely magical experience. Our Kruger safari exceeded expectations."</p><div class="testimonial-author"><div><strong>Sarah &amp; Mark Thompson</strong><span>Johannesburg, South Africa</span></div></div></div>
+        <div class="testimonial-card reveal delay-1"><div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="testimonial-text">"Flawless airport pickup and a deeply moving township tour."</p><div class="testimonial-author"><div><strong>Dr. James Okafor</strong><span>Lagos, Nigeria</span></div></div></div>
+        <div class="testimonial-card reveal delay-2"><div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="testimonial-text">"Perfect logistics for our corporate group and outstanding service."</p><div class="testimonial-author"><div><strong>Lisa van der Merwe</strong><span>Pretoria, South Africa</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div id="lightbox" class="lightbox" role="dialog" aria-label="Image viewer" aria-modal="true"><button class="lightbox-close" id="lightbox-close" aria-label="Close image viewer"><i class="fas fa-times"></i></button><button class="lightbox-prev" id="lightbox-prev" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button><button class="lightbox-next" id="lightbox-next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button><div class="lightbox-content"><img id="lightbox-img" src="" alt="" /><p id="lightbox-caption"></p></div></div>
+  <footer class="footer"><div class="footer-bottom"><div class="container"><div class="footer-bottom-inner"><p>&copy; <span id="copyright-year">2026</span> Lutsedus Travels &amp; Tours.</p><p class="footer-legal"><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms</a> | <a href="cookie.html">Cookie</a></p></div></div></div></footer>
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+  <script src="cms-runtime.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+

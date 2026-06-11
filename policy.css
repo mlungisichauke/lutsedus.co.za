@@ -1,0 +1,124 @@
+:root {
+  --navy: #0a1628;
+  --navy-light: #1a2a4a;
+  --gold: #c9a84c;
+  --sand: #f8f4ea;
+  --white: #ffffff;
+  --text: #1b2330;
+  --muted: #586073;
+  --border: #e4dcc9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #fffaf0 0%, var(--sand) 100%);
+}
+
+.policy-header {
+  background: linear-gradient(120deg, var(--navy), var(--navy-light));
+  color: var(--white);
+  padding: 1.1rem;
+}
+
+.policy-nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.policy-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.policy-logo-image {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.98);
+  padding: 0.2rem;
+  border-radius: 12px;
+  display: block;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.14);
+}
+
+.policy-nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.policy-nav .admin-link {
+  background: rgba(201, 168, 76, 0.18);
+  border: 1px solid rgba(201, 168, 76, 0.45);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+}
+
+.policy-wrap {
+  max-width: 920px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.policy-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.4rem;
+  box-shadow: 0 18px 40px rgba(10, 22, 40, 0.08);
+}
+
+h1,
+h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--navy);
+}
+
+h1 {
+  margin-top: 0;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+}
+
+h2 {
+  margin-top: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+p,
+li {
+  line-height: 1.75;
+  color: var(--text);
+}
+
+small,
+.policy-meta {
+  color: var(--muted);
+}
+
+ul {
+  margin-top: 0.4rem;
+}
+
+.policy-footer {
+  text-align: center;
+  padding: 1.4rem 1rem 2rem;
+  color: var(--muted);
+}
+
+.policy-footer a {
+  color: var(--navy);
+  font-weight: 700;
+  text-decoration: none;
+}

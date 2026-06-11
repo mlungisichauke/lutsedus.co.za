@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Lutsedus Admin Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <main class="admin-shell">
+    <section id="login-screen" class="login-screen">
+      <div class="login-card">
+        <div class="admin-brand-row">
+          <img src="logo/logo.jpeg" alt="Lutsedus Travels & Tours logo" class="admin-logo-image" />
+          <div>
+            <p class="admin-eyebrow">Lutsedus Travels &amp; Tours</p>
+            <h1><i class="fas fa-shield-halved"></i> Admin Portal</h1>
+          </div>
+        </div>
+        <p>Manage website text and photos across all pages.</p>
+
+        <form id="login-form" class="login-form" novalidate>
+          <label for="username">Username</label>
+          <input id="username" name="username" type="text" autocomplete="username" required />
+
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required />
+
+          <button type="submit"><i class="fas fa-right-to-bracket"></i> Login</button>
+          <p id="login-message" class="message" aria-live="polite"></p>
+        </form>
+
+        <a class="back-link" href="index.html"><i class="fas fa-arrow-left"></i> Back to website</a>
+      </div>
+    </section>
+
+    <section id="console-screen" class="console-screen hidden">
+      <header class="console-header">
+        <div>
+          <div class="admin-console-brand">
+            <img src="logo/logo.jpeg" alt="Lutsedus Travels & Tours logo" class="admin-logo-image" />
+            <p class="admin-eyebrow">Lutsedus Travels &amp; Tours</p>
+          </div>
+          <h2>Lutsedus Content Console</h2>
+          <p>Click text or images in preview, edit value, then save.</p>
+        </div>
+        <div class="header-actions">
+          <a href="index.html" target="_blank" rel="noopener" class="ghost-btn"><i class="fas fa-up-right-from-square"></i> Open Site</a>
+          <button id="logout-btn" class="danger-btn" type="button"><i class="fas fa-right-from-bracket"></i> Logout</button>
+        </div>
+      </header>
+
+      <div class="console-grid">
+        <aside class="editor-panel">
+          <div class="field-block">
+            <label for="page-select">Page</label>
+            <select id="page-select">
+              <option value="index.html">Home Page</option>
+              <option value="privacy.html">Privacy Policy</option>
+              <option value="terms.html">Terms &amp; Conditions</option>
+              <option value="cookie.html">Cookie Policy</option>
+            </select>
+          </div>
+
+          <div class="field-block">
+            <label for="selector-input">Selected Element (CSS selector)</label>
+            <input id="selector-input" type="text" placeholder="Click an element in preview" />
+          </div>
+
+          <div class="field-block">
+            <label for="type-select">Content Type</label>
+            <select id="type-select">
+              <option value="text">Text</option>
+              <option value="html">HTML</option>
+              <option value="image-src">Image Source (img)</option>
+              <option value="background-image">Background Image URL</option>
+            </select>
+          </div>
+
+          <div class="field-block">
+            <label for="value-input">Value</label>
+            <textarea id="value-input" rows="8" placeholder="New text, HTML, or image URL"></textarea>
+          </div>
+
+          <div class="field-block upload-block">
+            <label for="image-folder-select">Image From Folder (images/)</label>
+            <select id="image-folder-select">
+              <option value="">Select an image from images/...</option>
+            </select>
+            <button id="refresh-images-btn" type="button" class="ghost-btn"><i class="fas fa-rotate"></i> Refresh Images List</button>
+            <button id="use-image-btn" type="button" class="ghost-btn"><i class="fas fa-image"></i> Use Selected Image</button>
+            <small class="helper-text">Select from your existing images folder only.</small>
+          </div>
+
+          <div class="field-block upload-block">
+            <label for="current-password-input">Change Admin Password</label>
+            <input id="current-password-input" type="password" autocomplete="current-password" placeholder="Current password" />
+            <input id="new-password-input" type="password" autocomplete="new-password" placeholder="New password (min 10 chars)" />
+            <input id="confirm-password-input" type="password" autocomplete="new-password" placeholder="Confirm new password" />
+            <button id="change-password-btn" type="button" class="ghost-btn"><i class="fas fa-key"></i> Update Password</button>
+            <small class="helper-text">Use a strong password with letters, numbers, and symbols.</small>
+          </div>
+
+          <div class="panel-buttons">
+            <button id="apply-btn" type="button"><i class="fas fa-wand-magic-sparkles"></i> Apply Preview</button>
+            <button id="save-btn" type="button" class="primary-btn"><i class="fas fa-floppy-disk"></i> Save Change</button>
+            <button id="delete-btn" type="button" class="ghost-btn"><i class="fas fa-trash"></i> Remove Selected</button>
+            <button id="reset-btn" type="button" class="danger-btn"><i class="fas fa-rotate-left"></i> Reset All Changes</button>
+          </div>
+
+          <p id="console-message" class="message" aria-live="polite"></p>
+
+          <div class="saved-box">
+            <h3>Saved Overrides</h3>
+            <ul id="override-list"></ul>
+          </div>
+
+          <div class="saved-box">
+            <h3>Recent Activity</h3>
+            <ul id="audit-list"></ul>
+          </div>
+        </aside>
+
+        <section class="preview-panel">
+          <div class="preview-top">
+            <span><i class="fas fa-mouse-pointer"></i> Selection Mode: click any text or image in the preview</span>
+          </div>
+          <iframe id="preview-frame" title="Website preview"></iframe>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
